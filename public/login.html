@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="module.auth">
+    <head>
+        <title>Login</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+        <script src="/js/module.auth.js"></script>
+        <style>
+            fieldset {
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body ng-controller="module.auth.controller as auth">
+        <h1><a href="/">Homepage</a></h1>
+        <form ng-submit="auth.login.submit($event)">
+            <h1>Login!</h1>
+            <fieldset>
+                <label>Email</label>
+                <input required placeholder="Email" type="email" ng-model="auth.payloads.login.email"/>
+            </fieldset>
+            <fieldset>
+                <label for="password">Password</label>
+                <input required placeholder="Password" type="password" ng-model="auth.payloads.login.password"/>
+            </fieldset>
+            <button type="submit">Login</button>
+            <p ng-class="auth.login.alert">{{ auth.login.message }}</p>
+        </form>
+        <form ng-submit="auth.register.submit($event)">
+            <h1>Register!</h1>
+            <fieldset>
+                <label>Email</label>
+                <input required placeholder="Email" type="email" ng-model="auth.payloads.register.email"/>
+            </fieldset>
+            <fieldset>
+                <label for="password">Password</label>
+                <input required placeholder="Create a password" type="password" ng-model="auth.payloads.register.password"/>
+            </fieldset>
+            <button type="submit">Register</button>
+            <p ng-class="auth.register.alert">{{ auth.register.message }}</p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+#map	{
+	    height: 60%;
+		width: 100%;
+
+	}
+
+.img {
+	max-width: 40vw;
+}
+
+.background  {
+		background-image: url("/images/background.jpg");
+}
+.navspace	{
+	float: right;
+	
+}
+
+.navbar-collapse	{
+	position: relative;
+	z-index: 1;
+}
+
+.btn	{
+	background-color: #C6C6C9;
+}
+
+.form-control	{
+	background-color: #C6C6C9;
+}
+
+.carousel	{
+	background-color: #1F2024;
+	padding: 5px;
+	width: 65%;
+	margin: auto;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+
+.carousel-inner.onebyone-carosel { margin: auto; width: 90%; }
+
+.onebyone-carosel .active.left { left: -33.33%; }
+
+.onebyone-carosel .active.right { left: 33.33%; }
+
+.onebyone-carosel .next { left: 33.33%; }
+
+.onebyone-carosel .prev { left: -33.33%; }
+
+.carousel-indicator
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 10px;
+    background-color: #7B7F7B;
+    border: 0px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
