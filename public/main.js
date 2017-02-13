@@ -3,11 +3,15 @@ var map;
 	var markers =[];
 
 	function initMap()	{
-		map = new google.maps.Map(document.getElementById('map'), {center: {lat: 40.7413, lng: -73.9980}, zoom: 13});
+		map = new google.maps.Map(document.getElementById('map'), {center: {lat: 40.0054, lng: -105.2218}, zoom: 13});
 		
 
 	var locations = [
-	{title: 'Our Home', location: {lat: 39.976659, lng: -105.264687}},
+	{title: 'Some place', location: {lat: 39.9766, lng: -105.2646}},
+	{title: 'NW Corner', location: {lat: 40.2900, lng: -105.4300}},
+	// {title: 'NE corner', location: {lat: 40.2900, lng: -105.0360}},
+	// {title: 'SE Corner', location: {lat: 39.7400, lng: -105.0360}},
+	// {title: 'SW Corner', location: {lat: 39.7400, lng: -105.4300}},
 	
 	];
 
