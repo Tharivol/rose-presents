@@ -16,11 +16,16 @@
     <script src="/main.js"></script>
   </head>
   <body class='background' ng-controller="roseController as rCtl">
+
+    <video class="backgroundmov" autoplay>
+      <source src="/images/shutterstock_v23196988.mov">
+    </video>
+
     <div class ="social-media">
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-twitter"></a>
-    <a href="#" class="fa fa-pinterest"></a>
-    <a href="#" class="fa fa-instagram"></a>
+    <a href="https://www.facebook.com/RosePresentsWeddingDances/" class="fa fa-facebook"></a>
+    <a href="http://www.twitter.com/" class="fa fa-twitter"></a>
+    <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>
+    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
     </div>
     
     <div id="myModal" class="modal">
@@ -46,7 +51,6 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href= "https://www.google.com/maps/d/edit?mid=1f7eVShBIydv6FGZrXDeluQ21anc&ll=39.97519565649651%2C-105.33691401679687&z=10">Area Served</a></li>
               <li ng-click="rCtl.gmap()"><a href="#">Locations</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>

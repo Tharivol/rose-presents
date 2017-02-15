@@ -71,7 +71,7 @@ app.use(function(req,res,next){
 
 var checkIfLoggedIn = function(req, res, next) {
     if( req.session.uid ) {
-        console.info('User is logged in, proceeding to dashboard...');
+        console.info('User is logged in, proceeding to form...');
         next();
     } else {
         console.warn('User is not logged in!')
@@ -82,7 +82,7 @@ var checkIfLoggedIn = function(req, res, next) {
 
 var checkIfLoggedInForAjax = function(req, res, next) {
     if( req.session.uid ) {
-        console.info('User is logged in, proceeding to dashboard...');
+        console.info('User is logged in, proceeding to form...');
         next();
     } else {
         console.warn('User is not logged in!')
@@ -100,12 +100,12 @@ app.get('/login', function(req, res) {
     res.sendFile('login.html', {root: `${__dirname}/public`})
 })
 
-app.get('/dashboard', checkIfLoggedIn, function(req, res){
+app.get('/form', checkIfLoggedIn, function(req, res){
 
-    User.findOne({_id: req.session.uid}, function(err, user){
-        res.send(`Hello, ${user.email}, welcome to your dashboard!`)
-    })
-    // res.sendFile('dashboard.html', {root: `${__dirname}/public`})
+    // User.findOne({_id: req.session.uid}, function(err, user){
+    //     res.send(`Hello, ${user.email}, welcome to your form!`)
+    // })
+    res.sendFile('form.html', {root: `${__dirname}/public`})
 });
 
 
@@ -189,6 +189,22 @@ app.get('/logout', function(req, res) {
     res.redirect('/');
 });    
 
+
+var Form= require("./models/form.js")
+
+app.post('/intakeform', function(req,res)  {
+    var newForm= new Form(req.body);
+    newForm.save(function(saveErr, form) {
+                if( saveErr ) { res.status(500).send("Failed to save form") } 
+                else {
+                    //send email when successfully added to database.
+                    // req.body.firstname.
+                    // req.body.lastname.
+                    // req.body.phone.
+
+                    res.send({ message: 'intake form success' }); // send a success message
+                }
+} )})
 
 
 app.listen(3000, (err) => {

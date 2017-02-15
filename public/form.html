@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="module.form">
+    <head>
+        <title>SignIn Page</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script src="/js/module.form.js"></script>
+    </head>
+    <body ng-controller="FormController as fCtl" class="container">
+        <h1>Welcome to your Form!</h1>
+        <p><a href="/logout" class="btn btn-lg btn-danger">Logout</a></p>
+        <form ng-submit="fCtl.submit()">
+        	<input type="text" placeholder='First name' ng-model='fCtl.form.firstname'>
+        	<br>
+        	<input type="text" placeholder='Last name' ng-model='fCtl.form.lastname'>
+        	<br><input type="text" placeholder='Age' ng-model='fCtl.form.age'>
+        	<br><input type="text" placeholder='Address' ng-model='fCtl.form.address'>
+        	<br><input type="text" placeholder='Email' ng-model='fCtl.form.email'>
+        	<br><input type="text" placeholder='Phone number' ng-model='fCtl.form.phone'>
+        	<br><input type="text" placeholder='Injuries' ng-model='fCtl.form.injury'>
+        	<br><input type="text" placeholder='Profession' ng-model='fCtl.form.profession'>
+        	<br><input type="text" placeholder='Song choices' ng-model='fCtl.form.songs'>
+        	<br><button type="submit">Send Form</button>
+        	</form>
+    </body>
+</html>

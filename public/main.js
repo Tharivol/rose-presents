@@ -3,17 +3,37 @@ var map;
 	var markers =[];
 
 	function initMap()	{
-		map = new google.maps.Map(document.getElementById('map'), {center: {lat: 40.0054, lng: -105.2218}, zoom: 13});
+		map = new google.maps.Map(document.getElementById('map'), {center: {lat: 40.000, lng: -105.200}, zoom: 9});
 		
 
 	var locations = [
-	{title: 'Some place', location: {lat: 39.9766, lng: -105.2646}},
-	{title: 'NW Corner', location: {lat: 40.2900, lng: -105.4300}},
-	// {title: 'NE corner', location: {lat: 40.2900, lng: -105.0360}},
-	// {title: 'SE Corner', location: {lat: 39.7400, lng: -105.0360}},
-	// {title: 'SW Corner', location: {lat: 39.7400, lng: -105.4300}},
+	 // {title: 'park Ave Penthouse', location: {lat: 40.7713024, lng: -73.9632393}}, 
+	 // {title: 'Chelsea Loft', location: {lat: 40.7444883, lng: -73.9949465}},
+	{title: 'NW Corner', location: {lat: 40.290, lng: -105.430}},
+	{title: 'NE corner', location: {lat: 40.290, lng: -105.036}},
+	{title: 'SE Corner', location: {lat: 39.740, lng: -105.036}},
+	{title: 'SW Corner', location: {lat: 39.740, lng: -105.430}},
 	
 	];
+	var area=[
+	{lat: 40.290, lng: -105.430},
+	{lat: 40.290, lng: -105.036},
+	{lat: 39.740, lng: -105.036},
+	{lat: 39.740, lng: -105.430},
+	{lat: 40.290, lng: -105.430}
+	];
+
+	var mapshade= new google.maps.Polygon({
+		path: area,
+		geodesic: true,
+		strokeColor: "#FF7659",
+		strokeOpacity: 1.0,
+		strokeWeight: 2,
+		fillColor: "#FF7659",
+		fillOpacity: 0.25
+	})
+
+	mapshade.setMap(map)
 
 	var largeInfowindow = new google.maps.InfoWindow();
 
@@ -34,14 +54,20 @@ var map;
 		});
 		// Push the marker to our array of markers.
 		markers.push(marker);
+		
+
 		//Extend the boundaries of the map for each marker
-		bounds.extend(marker.position);
+		// bounds.extend(marker.position);
+		// Took out bounds andmap.fitBounds and it started working again 
 		//Create an onlick event to open an infowindow at each marker.
+		
+
 		marker.addListener('click', function()	{
 			populateInfoWindow(this, largeInfowindow);
 		});
 	}
-		map.fitBounds(bounds);
+		// map.fitBounds(bounds);
+		// Took out bounds andmap.fitBounds and it started working again 
 }
 		function populateInfoWindow(marker, infowindow)	{
 			//check to make sure the infowindow is not already opened on this marker'
@@ -55,3 +81,19 @@ var map;
 				});
 			}
 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
