@@ -15,7 +15,7 @@
 
 .img {
 	max-width: 45vw;
-  background-color: white;
+  border-radius: 50%;
   
 }
 
@@ -171,10 +171,16 @@
   color: white;
 }
 
+.formbody {
+  min-height: 80px;
+    background-image: url("images/WendyDennisbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-
-
-
+.formtextcolor  {
+  color: white;
+}
 
 
 
