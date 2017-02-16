@@ -7,22 +7,47 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body class="formbody" ng-controller="FormController as fCtl" class="container">
-        <h1 class="formtextcolor">Welcome to your Form!</h1>
-        <p><a href="/logout" class="btn btn-lg btn-danger">Logout</a></p>
+        <h1 class="formtextcolor">Congratulations!</h1>
+        <h1 class="formtextcolor">Tell us a little about yourself!</h1>
         <form ng-submit="fCtl.submit()">
-        	<h2>
-            <input type="text" placeholder='First name' ng-model='fCtl.form.firstname'>
+        	<h1>
+            <input class="textsize" type="text" placeholder='First name' ng-model='fCtl.form.firstname'>
         	<br>
-        	<input type="text" placeholder='Last name' ng-model='fCtl.form.lastname'>
-        	<br><input type="text" placeholder='Age' ng-model='fCtl.form.age'>
-        	<br><input type="text" placeholder='Address' ng-model='fCtl.form.address'>
-        	<br><input type="text" placeholder='Email' ng-model='fCtl.form.email'>
-        	<br><input type="text" placeholder='Phone number' ng-model='fCtl.form.phone'>
-        	<br><input type="text" placeholder='Injuries' ng-model='fCtl.form.injury'>
-        	<br><input type="text" placeholder='Profession' ng-model='fCtl.form.profession'>
-        	<br><input type="text" placeholder='Song choices' ng-model='fCtl.form.songs'>
-        	<br><button type="submit">Send Form</button>
-            </h2>
+        	<input class="textsize" type="text" placeholder='Last name' ng-model='fCtl.form.lastname'>
+        	<br><input class="textsize" type="text" placeholder='Age' ng-model='fCtl.form.age'>
+        	<br><input class="textsize" type="text" placeholder='Address' ng-model='fCtl.form.address'>
+        	<br><input class="textsize" type="text" placeholder='Email' ng-model='fCtl.form.email'>
+        	<br><input class="textsize" type="text" placeholder='Phone number' ng-model='fCtl.form.phone'>
+        	<br><input class="textsize" type="text" placeholder='Injuries' ng-model='fCtl.form.injury'>
+        	<br><input class="textsize" type="text" placeholder='Profession' ng-model='fCtl.form.profession'>
+        	<br><input class="textsize" type="text" placeholder='Song choices' ng-model='fCtl.form.songs'>
+        	<br><button class="textsize" type="submit">Send Form</button>
+            </h1>
         	</form>
+            <p><a href="/logout" class="btn btn-lg btn-danger">Back to Main Page</a></p>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

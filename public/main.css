@@ -13,9 +13,22 @@
 
 	}
 
+.imgdiv {
+  color: pink;
+  opacity: 0.6;
+
+}
+
 .img {
-	max-width: 45vw;
+	/*max-width: 50vw;*/
   border-radius: 50%;
+  width: 25vw;
+  height: 20vw;
+  position: relative;
+  /*left: 5%;
+  top: 5%;*/
+  z-index: 1;
+  background-color: pink:;
   
 }
 
@@ -46,7 +59,7 @@
 }
 
 
-.carousel-inner.onebyone-carosel { margin: auto; width: 90%; }
+.carousel-inner.onebyone-carosel { margin: auto; width: 100%; }
 
 .onebyone-carosel .active.left { left: -33.33%; }
 
@@ -68,8 +81,8 @@
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 95%; /* Full width */
-    height: 95%; /* Full height */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
@@ -181,6 +194,36 @@
 .formtextcolor  {
   color: white;
 }
+
+.textsize {
+  height: 26px;
+  width: 140px;
+  font-weight: bold;
+  font-size: 14px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
