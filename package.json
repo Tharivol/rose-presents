@@ -1,0 +1,28 @@
+{
+  "name": "rosepresents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tharivol/rose-presents.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tharivol/rose-presents/issues"
+  },
+  "homepage": "https://github.com/Tharivol/rose-presents#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.16.1",
+    "client-sessions": "^0.7.0",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.2"
+  }
+}
