@@ -15,15 +15,15 @@
 
 .imgdiv {
   color: pink;
-  opacity: 0.7;
+  opacity: 0.6;
 
 }
 
 .img {
 	/*max-width: 50vw;*/
   border-radius: 50%;
-  width: 24vw;
-  height: 19vw;
+  width: 25vw;
+  height: 20vw;
   position: relative;
   /*left: 5%;
   top: 5%;*/
@@ -51,30 +51,23 @@
 	background-color: #C6C6C9;
 }
 
-.carousel	{
-	background-color: #1F2024;
-	/*padding: 10px;*/
-	width: 40%;
-	margin: auto;
-  border: 1vw solid white;
-  box-shadow: 10px 10px 5px #888888
+/*CAROUSEL*/
 
-}
+/*.carousel {
+  background-color: #1F2024;
+  padding: 5px;
+  width: 45%;
+  margin: auto;
+}*/
 
+.carousel-inner .active.left { left: -33%; }
+.carousel-inner .next        { left:  33%; }
+.carousel-inner .prev        { left: -33%; }
+.carousel-control.left,.carousel-control.right {background-image:none;}
+.item:not(.prev) {visibility: visible;}
+.item.right:not(.prev) {visibility: hidden;}
+.rightest{ visibility: visible;}
 
-.carousel-inner.onebyone-carosel { margin: auto; width: 100%; }
-
-.onebyone-carosel .active.left { left: -33.33%; }
-
-.onebyone-carosel .active.right { left: 33.33%; }
-
-.onebyone-carosel .next { left: 33.33%; }
-
-.onebyone-carosel .prev { left: -33.33%; }
-
-.testimonyColor {
-    color: #FFAD19;
-}
 
 
 /* The Modal (background) */
@@ -205,18 +198,6 @@
   font-size: 14px;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
