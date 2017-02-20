@@ -13,25 +13,14 @@
 
 	}
 
-.imgdiv {
-  color: pink;
-  opacity: 0.7;
-
-}
-
 .img {
-	/*max-width: 50vw;*/
   border-radius: 50%;
-  width: 24vw;
-  height: 19vw;
+  width: 23vw;
+  height: 18vw;
   position: relative;
-  /*left: 5%;
-  top: 5%;*/
   z-index: 1;
-  background-color: pink:;
-  
+  opacity: 0.95;
 }
-
 
 .navspace	{
 	float: right;
@@ -55,6 +44,7 @@
 	background-color: #1F2024;
 	/*padding: 10px;*/
 	width: 40%;
+  height: auto;
 	margin: auto;
   border: 1vw solid white;
   box-shadow: 10px 10px 5px #888888;
@@ -76,8 +66,14 @@
 
 .testimonyColor {
     color: #FFAD19;
+    font-family: Arial;
+    font-style: italic;
 }
 
+.testsize {
+  width: 540px;
+  height: 450px;
+}
 
 /* The Modal (background) */
 .modal {
