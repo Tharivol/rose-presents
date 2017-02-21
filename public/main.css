@@ -241,6 +241,18 @@ bottom: 80px;
 position: relative;
 
 }
+@media (max-width: 925px) {
+  .infopageposition {
+    margin-top: 80px;
+    width: 75vw;
+  } 
+  .collapse.navbar-collapse {
+    position: relative;
+    z-index: 10;
+  }
+
+}
+
 
 .infodancesongs {
   color: blue;
