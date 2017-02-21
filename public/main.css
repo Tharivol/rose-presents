@@ -32,6 +32,11 @@
 	z-index: 1;
 }
 
+.color-me {
+  color: white;
+  font-size: 25px;
+}
+
 .btn	{
 	background-color: #C6C6C9;
 }
