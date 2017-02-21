@@ -42,10 +42,8 @@
 
 .carousel	{
 	background-color: #1F2024;
-	/*padding: 10px;*/
-	width: 40%;
-  height: auto;
-	margin: auto;
+  width: 40%;
+  margin: auto;
   border: 1vw solid white;
   box-shadow: 10px 10px 5px #888888;
   bottom: 60px;
@@ -53,6 +51,7 @@
 
 }
 
+.carousel-inner>.item>img { height: 450px; }
 
 .carousel-inner.onebyone-carosel { margin: auto; width: 100%; }
 
@@ -204,13 +203,35 @@
 
 }
 
+/*Info page css*/
 
+.infoBackground  {
+  background-image: url("images/backgroundinfo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.infopageposition {
+color: white;
+font-family: Arial;
+margin-left: 25px;
+margin-right: 25px;
+border: 0em;
+padding: 0em;
+bottom: 80px;
+position: relative;
 
+}
 
+.infodancesongs {
+  color: blue;
+  text-decoration: underline;
 
+}
 
-
+.infofont {
+  font-size: 1vw;
+}
 
 
 
