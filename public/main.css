@@ -233,12 +233,13 @@
 .infopageposition {
 color: white;
 font-family: Arial;
-margin-left: 4vw;
+margin-left: 5vw;
 margin-right: 4vw;
 border: 0em;
 padding: 0em;
 bottom: 80px;
 position: relative;
+
 
 }
 @media (max-width: 925px) {
@@ -269,9 +270,17 @@ position: relative;
   font-size: 1.5vw;
 }
 
+.font-size1 {
+  font-size: 3vw;
+}
 
+.font-size2 {
+  font-size: 2.25vw;
+}
 
-
+.font-size3 {
+  font-size: 1.5vw;
+}
 
 
 
