@@ -11,19 +11,33 @@ function infoRoute($routeProvider) {
     // using the routeProvider...
     $routeProvider
     // chain on a route which will define the html template to insert in the ng-view when that route is hit
-    .when('/picksong',{
-        templateUrl: '/templates/picksong.html'
+    .when('/musicchoices',{
+        templateUrl: '/templates/musicchoices.html'
     })
-    .when('/servicepackage', {
-        templateUrl: '/templates/servicepackage.html'
+    .when('/booklessons', {
+        templateUrl: '/templates/booklessons.html'
     })
     // you can also add a controller using the 'controller as' syntax which will govern that html template
-    .when('/whattowear', {
-        templateUrl: '/templates/whattowear.html'
-        
+    .when('/rehearsalinfo', {
+        templateUrl: '/templates/rehearsalinfo.html' 
     })
-    .when('/whoisrose', {
-        templateUrl: '/templates/whoisrose.html'
+    .when('/aboutrose', {
+        templateUrl: '/templates/aboutrose.html'
+    })
+    .when('/testimonials', {
+        templateUrl: '/templates/testimonials.html'
+    })
+    .when('/crystal', {
+        templateUrl: '/templates/crystal.html' 
+    })
+    .when('/diamond', {
+        templateUrl: '/templates/diamond.html'
+    })
+    .when('/platinum', {
+        templateUrl: '/templates/platinum.html'
+    })
+    .when('/doubleplatinum', {
+        templateUrl: '/templates/doubleplatinum.html'
     })
     // and like an 'if' statement, this is our 'else' - where to go if a bogus route is entered.
     .otherwise( { redirectTo:'/'} )
