@@ -193,6 +193,23 @@ app.get('/logout', function(req, res) {
 var Form= require("./models/form.js")
 
 app.post('/intakeform', function(req,res)  {
+    var api_key = process.env.mailgunkey;
+var domain = 'www.rosepresents.co';
+var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+ 
+var data = {
+  from: res.body.form.email,
+  to: "info@rosepresents.co",
+  subject: 'RP-intake form',
+  text: "name:" +res.body.form.firtname + "" + res.body.form.lastname + "\n"
+         + "age:" +res.body.form.age + "\n"
+//          do more of these the same way
+// };
+ 
+mailgun.messages().send(data, function (error, body) {
+  console.log(body);
+});
+
     var newForm= new Form(req.body);
     newForm.save(function(saveErr, form) {
                 if( saveErr ) { res.status(500).send("Failed to save form") } 
@@ -205,6 +222,7 @@ app.post('/intakeform', function(req,res)  {
                     res.send({ message: 'intake form success' }); // send a success message
                 }
 } )})
+
 
 
 app.listen(8080, (err) => {
