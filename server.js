@@ -195,19 +195,28 @@ var Form= require("./models/form.js")
 app.post('/intakeform', function(req,res)  {
     var api_key = process.env.mailgunkey;
 var domain = 'www.rosepresents.co';
+    console.log(req.body)
 var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
  
 var data = {
-  from: res.body.form.email,
+  from: req.body.email,
   to: "info@rosepresents.co",
   subject: 'RP-intake form',
-  text: "name:" +res.body.form.firtname + "" + res.body.form.lastname + "\n"
-         + "age:" +res.body.form.age + "\n"
-//          do more of these the same way
-// };
+  text: "name:" +req.body.firstname + "" + req.body.lastname + "\n"
+         + "age:" +req.body.age + "\n"
+         + "address:" +req.body.address + "\n"
+         + "Email:" +req.body.email + "\n"
+         + "Phone number:" +req.body.phone + "\n"
+         + "Injuries:" +req.body.injuries + "\n"
+         + "Profession:" +req.body.profession + "\n"
+         + "Song choices:" +req.body.song + "\n"
+};
  
 mailgun.messages().send(data, function (error, body) {
-  console.log(body);
+  if( error)    { console.log("mailgun", error)
+    } else  {
+        console.log(body);}
+
 });
 
     var newForm= new Form(req.body);

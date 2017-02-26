@@ -5,7 +5,7 @@ var intakeform = mongoose.Schema({
     lastname: { type:String, required:true },
     address: String,
     age: Number,
-    email: String,
+    email: { type:String, required:true, unique:true},
     phone: Number,
     injury: String,
     profession: String,
